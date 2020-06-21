@@ -123,15 +123,15 @@ public class Parliament {
 			if (sc.hasNext()) {
 				fractionName = sc.next();
 			}
-			
+
 			if (list.size() > 0) {
 
 				Iterator<Fraction> iterator = list.iterator();
 				while (iterator.hasNext()) {
 					Fraction fraction = (Fraction) iterator.next();
 					if (fraction.getName().toString().equalsIgnoreCase(fractionName)) {
-						System.out.println(
-								"Fraction " + fraction.getName().toString() + " has been deleted from Parliament.");
+						System.out.println("Fraction " + fraction.getName().toString() + 
+								" has been deleted" + " from Parliament.");
 						iterator.remove();
 						flag = true;
 					}
@@ -166,8 +166,6 @@ public class Parliament {
 		}
 	}
 
-	
-	
 	public void showFraction() {
 
 		Fraction fraction = checkInputFraction("Please choose fraction name to show all fraction");
@@ -210,11 +208,10 @@ public class Parliament {
 				"Please choose fraction name (from list below) to show all deputies in it");
 		fraction.showAllDeputies();
 	}
-	
+
 	public void clearFraction() {
 
-		Fraction fraction = checkInputFraction(
-				"Please choose fraction name (from list below) to clear");
+		Fraction fraction = checkInputFraction("Please choose fraction name (from list below) to clear");
 		fraction.clearFraction();
 	}
 
