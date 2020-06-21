@@ -123,7 +123,7 @@ public class Parliament {
 			if (sc.hasNext()) {
 				fractionName = sc.next();
 			}
-
+			
 			if (list.size() > 0) {
 
 				Iterator<Fraction> iterator = list.iterator();
@@ -134,11 +134,8 @@ public class Parliament {
 								"Fraction " + fraction.getName().toString() + " has been deleted from Parliament.");
 						iterator.remove();
 						flag = true;
-
 					}
-
 				}
-
 			} else if (list.size() == 0) {
 				System.out.println("There are no fractions at all yet...");
 				break;
